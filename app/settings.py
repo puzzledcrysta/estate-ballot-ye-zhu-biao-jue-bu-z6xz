@@ -12,4 +12,4 @@ ROLE = '住宅小区业委会计票员'
 UNIT = '平方米'
 RULE_VERSION = 'estate-ballot-1.0'
 SIGNATURE = '户与面积双计'
-TABS = {'intake': '送审票册', 'contract': '产权字段', 'quality': '冲突票夹', 'domain': '份额计票', 'reconcile': '公示勾稽', 'runs': '议案记录', 'review': '计票底稿'}
+TABS = {'intake': '送审票册', 'contract': '产权字段', 'quality': '冲突票夹', 'domain': '份额计票', 'reconcile': '公示勾稽', 'notices': '公示批次', 'runs': '议案记录', 'review': '计票底稿'}

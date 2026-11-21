@@ -9,6 +9,9 @@ REASONS = {
     'AMOUNT_DELTA': '复算与外部账计量不同', 'BOOK_CONFLICT': '独立账含重复业务键',
     'RUN_UNKNOWN': '没有此批次', 'DEMO_UNKNOWN': '没有此样例', 'STALE': '复核版本已过期',
     'REVIEW_NOTE': '有差异时须填写复核意见', 'REVIEW_DECISION': '复核结论无效',
+    'NOTICE_EMPTY': '缺少送审文件', 'NOTICE_NAME': '送审文件名称重复',
+    'NOTICE_UNKNOWN': '没有此公示批次', 'NOTICE_SEALED': '公示批次已封存',
+    'NOTICE_UNSEALED': '公示批次尚未封存',
 }
 
 REASONS.update({'ESTATE_TITLE': '产权定义无效', 'ESTATE_SHARE': '产权份额不符', 'ESTATE_KIND': '议案类别无效', 'ESTATE_BALLOT': '表决票无效', 'ESTATE_CONFLICT': '表决票冲突', 'DATE': '日期格式无效', 'REV_BLOCKED': '较新来源尚未采信'})

@@ -15,6 +15,7 @@
 | M5 公示勾稽 | 核对独立清单和各类差异 | `POST /api/reconcile` | `app/modules/reconcile/service.py` | `tests/test_reconcile.py` |
 | M6 议案记录 | 打开历史批次并对原文件复跑 | `POST /api/runs` | `app/modules/runs/service.py` | `tests/test_runs.py` |
 | M7 计票底稿 | 登记复核结论并下载证据 | `POST /api/review/{run_id}` | `app/modules/review/decisions.py` | `tests/test_review.py` |
+| M8 公示批次 | 多楼栋送审合并为一次公示，封存与补传影响评估 | `POST /api/notices` | `app/modules/notices/merge.py` | `tests/test_notices.py` |
 
 ## 陷阱登记
 

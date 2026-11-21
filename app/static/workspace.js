@@ -1,5 +1,6 @@
 import {query, readInput, encodeInput} from './api.js';
 import {el, evidence, table} from './table.js';
+import {initNoticeBatch} from './notice-batch.js';
 
 const byId = id => document.getElementById(id);
 const settings = JSON.parse(byId('settings').textContent);
@@ -109,6 +110,13 @@ async function render() {
   for (const link of links) {
     if (link.dataset.module === stage) link.setAttribute('aria-current', 'page');
     else link.removeAttribute('aria-current');
+  }
+  const isNotice = stage === 'notices';
+  document.querySelector('.notice .grid').hidden = isNotice;
+  initNoticeBatch(isNotice);
+  if (isNotice) {
+    byId('tools').hidden = true;
+    return;
   }
   if (!result) return;
   const id = result.manifest.run_id;

@@ -20,8 +20,10 @@ def input_bytes(text, encoded, path):
             raise DataError('ENCODING', '原始文件编码无效') from error
     elif text is not None:
         raw = text.encode()
-    else:
+    elif path is not None:
         return path.read_bytes()
+    else:
+        raise DataError('CONTRACT', '缺少送审文件内容')
     if len(raw) > MAX_BYTES:
         raise DataError('LIMIT', '单个文件不能超过 128 KiB', 413)
     return raw

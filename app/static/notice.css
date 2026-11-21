@@ -129,3 +129,25 @@ td details { min-width: 5em; margin-top: 4px; color: var(--muted); border-left: 
   .scroll, #signal { overflow: visible; max-height: none; }
   thead { display: table-header-group; }
 }
+
+.notice-batch { margin-top: var(--gap); }
+.notice-batch[hidden] { display: none; }
+.notice-batch__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: var(--gap); }
+.notice-batch__head h2 { margin: 2px 0 0; font-size: clamp(20px, 2.4vw, 28px); }
+.notice-batch__meta { display: flex; align-items: center; gap: 10px; }
+.notice-batch__grid { display: grid; gap: var(--gap); grid-template-columns: minmax(260px, .8fr) minmax(0, 1.7fr); }
+.notice-batch__grid .notice-view { min-width: 0; }
+.notice-batch__grid form { grid-row: span 2; align-self: start; }
+.notice-batch h3 { margin: 0 0 10px; font-size: 14px; }
+.notice-files { display: grid; gap: 10px; margin-bottom: 10px; }
+.notice-file { border: 1px dashed var(--line-strong); border-radius: var(--radius); padding: 9px; background: var(--bg); }
+.notice-file label { display: grid; gap: 4px; margin: 0 0 6px; }
+.notice-file label span { color: var(--muted); font-size: 12px; }
+.notice-file textarea { font-family: var(--font-mono); font-size: 12px; }
+.notice-batch .scroll { max-height: 360px; }
+.notice-batch small { color: var(--muted); }
+.notice-batch h4 { margin: 14px 0 6px; font-size: 13px; color: var(--bad); }
+@media (max-width: 980px) {
+  .notice-batch__grid { grid-template-columns: minmax(0, 1fr); }
+  .notice-batch__grid form { grid-row: auto; }
+}

@@ -13,6 +13,15 @@ CREATE TABLE IF NOT EXISTS reviews (
   decision TEXT NOT NULL, note TEXT NOT NULL, changed TEXT NOT NULL,
   PRIMARY KEY(run_id,version)
 );
+CREATE TABLE IF NOT EXISTS notices (
+  id TEXT PRIMARY KEY, book BLOB NOT NULL, result TEXT NOT NULL,
+  sealed INTEGER NOT NULL DEFAULT 0, created TEXT NOT NULL, sealed_at TEXT
+);
+CREATE TABLE IF NOT EXISTS notice_sources (
+  notice_id TEXT NOT NULL REFERENCES notices(id),
+  source_id TEXT NOT NULL, name TEXT NOT NULL, payload BLOB NOT NULL,
+  ordinal INTEGER NOT NULL, PRIMARY KEY(notice_id, source_id)
+);
 """
 
 
